@@ -1,0 +1,114 @@
+@import 'vars';
+
+.tabs-block {
+	margin-top: 165px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.tabs-container {
+	position: relative;
+	min-width: 600px;
+	min-height: 450px;
+}
+
+.tabs-element {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: 0.6s;
+
+	&.choosen {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: all;
+	}
+}
+
+.tabs-buttons {
+	display: flex;
+	flex-direction: column;
+}
+
+.tabs-button {
+	width: 100%;
+	max-width: 330px;
+	padding: 30px 40px 27px 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+
+	&.clicked {
+		border: 1px solid #f1f1f1;
+		background: $mainColor;
+		box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.3);
+	}
+
+	&__icon {
+		width: 45px;
+		height: 45px;
+		margin-right: 15px;
+	}
+
+	&__name {
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 700;
+		color: $darkTextColor;
+		margin-bottom: 8px;
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 24px;
+		font-weight: 600;
+		color: $textColor;
+	}
+}
+
+@media (max-width: 990px) {
+	.tabs-block {
+		@include adaptiv-value('margin-top', 160, 80);
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.tabs-buttons {
+		margin-bottom: 25px;
+	}
+}
+
+@media (max-width: 650px) {
+	.tabs-container {
+		min-width: 100%;
+		min-height: 670px;
+	}
+
+	.tabs-element {
+		width: 100%;
+		max-width: 385px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		&__picture {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.tabs-container {
+		min-height: 580px;
+	}
+}
+
+@media (max-width: 330px) {
+	.tabs-container {
+		min-height: 510px;
+	}
+}

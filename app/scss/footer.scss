@@ -1,0 +1,132 @@
+@import 'vars.scss';
+
+.footer {
+	background: $footerColor;
+	padding: 111px 0 102px;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-list {
+	color: $headerLinkColor;
+	font-size: 16px;
+
+	&__item {
+		max-width: 232px;
+		line-height: 26px;
+		margin-bottom: 12px;
+
+		&:first-child {
+			margin-bottom: 30px;
+			line-height: 24px;
+			color: $mainColor;
+			font-weight: 700;
+		}
+
+		&--main {
+			color: $mainColor;
+			font-size: 24px;
+			line-height: 40px;
+		}
+	}
+
+	&__link {
+		color: $headerLinkColor;
+		transition: 0.6s;
+
+		&:hover {
+			color: $mainColor;
+		}
+	}
+}
+
+.footer-form {
+	display: flex;
+	max-width: 240px;
+	margin-top: 30px;
+	border-radius: 4px;
+	overflow: hidden;
+	border: 1px solid $mainColor;
+	font-size: 14px;
+	line-height: 28px;
+
+	& input {
+		height: 58px;
+		border: none;
+	}
+
+	& input:focus {
+		outline: none;
+	}
+}
+
+.footer-email {
+	width: 150px;
+	display: flex;
+	align-items: center;
+	padding-left: 15px;
+	background: rgba(249, 249, 249, 0.2);
+	color: $headerLinkColor;
+
+	&::placeholder {
+		text-align: center;
+	}
+}
+
+.footer-submit {
+	width: 90px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $footerSubmitColor;
+	color: $mainColor;
+	cursor: pointer;
+}
+
+.footer-icons {
+	margin-top: 35px;
+	display: flex;
+}
+
+.footer-icon {
+	display: inline-block;
+	margin-right: 35px;
+}
+
+@media (max-width: 1080px) {
+	.footer-container {
+		margin: auto;
+		max-width: 500px;
+		flex-wrap: wrap;
+	}
+
+	.footer-list {
+		margin-bottom: 60px;
+	}
+}
+
+@media (max-width: 620px) {
+
+	.footer {
+		padding: 66px 0;
+	}
+
+	.footer-container {
+		max-width: 100%;
+		flex-wrap: nowrap;
+		flex-direction: column;
+	}
+
+	.footer-list {
+		margin-left: 15px;
+	}
+
+	.footer-list:first-child {
+		align-self: center;
+		text-align: center;
+		margin-left: 0;
+	}
+}

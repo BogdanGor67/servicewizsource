@@ -1,0 +1,68 @@
+@import 'header-nav.scss';
+
+.header {
+	position: relative;
+	padding: 40px 0 253px;
+	background-image: url('../images/mainbg.jpg');
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.header-main {
+	margin-top: 116px;
+	color: $mainColor;
+	text-align: center;
+	font-weight: 500;
+
+	&__span {
+		display: inline-block;
+		margin-bottom: 14px;
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	&__text {
+		margin-top: 11px;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 40px;
+	}
+}
+
+.slogan {
+	font-size: 58px;
+	line-height: 80px;
+	font-weight: 500;
+}
+
+@media (max-width: 1080px) {
+	.header {
+		padding: 0;
+		@include adaptiv-value('padding-top', 40, 36);
+		@include adaptiv-value('padding-bottom', 253, 248);
+	}
+
+	.header-main {
+		@include adaptiv-value('margin-top', 116, 102);
+	}
+
+	.slogan {
+		@include adaptiv-font(58, 40);
+		@include adaptiv-value('line-height', 80, 57);
+	}
+}
+
+@media (max-width: 767px) {
+	.header {
+		background-image: url('../images/mobilemainbg.png');
+	}
+	.header-main {
+		&__text {
+			margin-top: 30px;
+		}
+	}
+}

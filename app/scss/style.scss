@@ -1,0 +1,84 @@
+@import '../../node_modules/swiper/swiper.scss';
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+@import 'header.scss';
+@import 'footer.scss';
+@import 'section.scss';
+@import 'benefits.scss';
+@import 'tabs.scss';
+@import 'stories-slider.scss';
+@import 'client-stories.scss';
+@import 'last-section.scss';
+
+*,
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff;
+}
+
+.swiper-slide {
+	width: 100%;
+}
+
+.title {
+	font-size: 40px;
+	line-height: 57px;
+	letter-spacing: 0.2px;
+	color: $darkTextColor;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 13px;
+
+	&--white {
+		color: $mainColor;
+		margin-bottom: 70px;
+	}
+}
+
+.second-title {
+	@include adaptiv-value('margin-bottom', 80, 65);
+}
+
+.arrow-prev {
+	fill: $arrowColor;
+	&.black {
+		fill: $darkTextColor;
+	}
+}
+
+.arrow-next {
+	fill: $arrowColor;
+	&.black {
+		fill: $darkTextColor;
+	}
+}
+
+@media (max-width: 767px) {
+	.title {
+		&--white {
+			margin: auto;
+			margin-bottom: 90px;
+			max-width: 220px;
+		}
+	}
+}
+
+@media (max-width: 420px) {
+	.title {
+		&--white {
+			transform: translateX(20px);
+			margin: auto;
+			margin-bottom: 90px;
+			max-width: 220px;
+		}
+	}
+}

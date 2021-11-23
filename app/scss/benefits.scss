@@ -1,0 +1,65 @@
+@import 'vars';
+
+.benefits-section {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.benefits-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px 37px;
+	transform: translateY(-140px);
+}
+
+.benefits-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	max-width: 330px;
+	height: 280px;
+	padding: 43px 15px 48px;
+	background: $mainColor;
+	box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.5);
+	border: 1px solid #dedede;
+
+	&__img {
+		margin-bottom: 37px;
+	}
+
+	&__title {
+		font-size: 16px;
+		line-height: 24px;
+		font-weight: 700;
+		margin-bottom: 14px;
+		color: $darkTextColor;
+	}
+
+	&__text {
+		max-width: 200px;
+		font-size: 14px;
+		line-height: 24px;
+		font-weight: 600;
+		letter-spacing: 0.2px;
+		color: $textColor;
+	}
+}
+
+@media (max-width: 1080px) {
+	.benefits-container {
+		max-width: 720px;
+		margin: auto;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 750px) {
+	.benefits-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 40px;
+	}
+}

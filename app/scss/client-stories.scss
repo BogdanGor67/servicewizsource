@@ -1,0 +1,17 @@
+@import 'vars';
+
+.client-stories {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@media (max-width: 1000px) {
+	.client-stories {
+		flex-direction: column;
+
+		&__picture {
+			@include adaptiv-value('margin-bottom', 80, 65);
+		}
+	}
+}

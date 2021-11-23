@@ -1,0 +1,73 @@
+@import 'vars';
+
+.last-section-inform {
+	max-width: 450px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 120px 97px;
+}
+
+.last-section {
+	background-image: url(../images/lastblockbg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-top-left-radius: 300px;
+}
+
+.last-section-block {
+	height: 200px;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	color: $mainColor;
+
+	&__img {
+
+	}
+
+	&__numbers {
+		font-size: 58px;
+		line-height: 80px;
+		letter-spacing: 0.2px;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: 0.1px;
+	}
+}
+
+@media (max-width: 860px) {
+	.last-section-inform {
+		max-width: 380px;
+		grid-gap: 50px 50px;
+	}
+
+	.last-section-block {
+		&__text--third {
+			font-size: 14px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	.last-section {
+		background-image: url('../images/lastblockbgmobile.jpg');
+	}
+
+	.last-section-inform {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.last-section-block {
+		margin-bottom: 90px;
+		&__text--third {
+			font-size: 16px;
+		}
+	}
+}
